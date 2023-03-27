@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">main.qml</file>
+        <file alias="NewButton.qml">NewButton.qml</file>
+        <file alias="CustomText.qml">CustomText.qml</file>
+        <file alias="customMessage.qml">customMessage.qml</file>
+    </qresource>
+</RCC>

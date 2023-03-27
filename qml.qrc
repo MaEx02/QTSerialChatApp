@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>NewButton.qml</file>
+        <file>CustomText.qml</file>
+        <file>customMessage.qml</file>
+    </qresource>
+</RCC>
