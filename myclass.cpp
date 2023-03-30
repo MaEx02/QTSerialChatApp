@@ -36,7 +36,6 @@ QString MyClass::avaibleSerialPorts(){
     foreach (const QSerialPortInfo &portInfo, ports) {
         returnString += "Port Adı: " + portInfo.portName() + "\n";
         returnString += "Açıklama: " + portInfo.description() + "\n";
-
         returnString += "Seri Numarası: " + portInfo.serialNumber() + "\n";
         returnString += "Sistem Konumu: " + portInfo.systemLocation() + "\n";
         returnString += "------------------------------------------------ \n" ;
@@ -46,8 +45,6 @@ QString MyClass::avaibleSerialPorts(){
 
 bool MyClass::sendStringData(QString data)
 {
-
-
     if(m_serial.open(QIODevice::ReadWrite)) {
         QByteArray writeData = data.toUtf8();
         m_serial.write(writeData);
@@ -76,5 +73,6 @@ QStringList MyClass::getSerialData(){
    m_data = QString::fromUtf8(data);
    QStringList m_list = m_data.split('^');
     return m_list;
+
 }
 

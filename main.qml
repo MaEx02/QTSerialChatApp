@@ -71,6 +71,7 @@ ApplicationWindow {
                 }
             }
         }
+        //merhaba
         Row {
             leftPadding: width*0.2
             anchors.horizontalCenter: parent.horizontalCenter
@@ -98,8 +99,8 @@ ApplicationWindow {
         }
     }
     function messageSetting(){
-        senderName = myClass.getSerialData()[0]
-        message = myClass.getSerialData()[1]
+        senderName = myClass.getSerialData()[1]
+        message = myClass.getSerialData()[0]
         outputText.text += "\n"+ senderName+": "+ message;
     }
 
