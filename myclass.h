@@ -16,7 +16,6 @@ public slots:
     Q_INVOKABLE void setUserName(const QString &name);
     Q_INVOKABLE QStringList getSerialPortInfo();
     Q_INVOKABLE QString avaibleSerialPorts();
-    Q_INVOKABLE bool openPort();
     Q_INVOKABLE bool sendStringData(QString data);
 signals:
     void userNameChanged(const QString &name);

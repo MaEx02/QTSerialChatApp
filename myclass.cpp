@@ -33,12 +33,18 @@ void MyClass::setUserName(const QString &name)
 
 QString MyClass::avaibleSerialPorts(){
     QString returnString = "";
+    int portCount = ports.count();
+    if(portCount == 0){
+        return "Ulaşılabilir port bulunmamaktadır lütfen portlarınız kontrol ediniz!";
+    }
     foreach (const QSerialPortInfo &portInfo, ports) {
         returnString += "Port Adı: " + portInfo.portName() + "\n";
         returnString += "Açıklama: " + portInfo.description() + "\n";
+        returnString += "Port Üreticisi: "+ portInfo.manufacturer()+"\n";
         returnString += "Seri Numarası: " + portInfo.serialNumber() + "\n";
         returnString += "Sistem Konumu: " + portInfo.systemLocation() + "\n";
         returnString += "------------------------------------------------ \n" ;
+        qDebug() << returnString;
     }
     return returnString;
 }
